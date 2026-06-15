@@ -29,32 +29,27 @@ class OrderStatusFinderTool extends Tool
     public function outputSchema(JsonSchema $schema): array
     {
         return [
-            'order_id' => $schema->number()
-                ->description('Order id')
-                ->required(),
-
-            'product' => $schema->string()
-                ->description('Product')
-                ->required(),
-
-            'status' => $schema->string()
-                ->description('Status of Order')
-                ->required(),
+            'order_id' => $schema->number()->description('Order id')->required(),
+            'product' => $schema->string()->description('Product')->required(),
+            'status' => $schema->string()->description('Status of Order')->required(),
         ];
     }
     public function handle(Request $request)
     {
+        # Validate Incoming parameters
         $validated = $request->validate([
             'order_id' => 'required|numeric'
         ]);
+        # Fetch related record
         $record = OrderStatus::where([
             ['order_id', '=', $validated['order_id']]
         ])->first();
+        # Generate Response
         if ($record) {
             return Response::structured([
-                    'order_id'=>$record->order_id,
-                    'product'=>$record->product,
-                    'status'=>$record->status,         
+                'order_id' => $record->order_id,
+                'product' => $record->product,
+                'status' => $record->status,
             ]);
         } else {
             return Response::error('Unable to fetch order for the given order id');

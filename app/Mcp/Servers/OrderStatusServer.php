@@ -13,15 +13,7 @@ use Laravel\Mcp\Server\Attributes\Version;
 #[Instructions('To fetch Order Status using order id')]
 class OrderStatusServer extends Server
 {
-    protected array $tools = [
-        OrderStatusFinderTool::class
-    ];
-
-    protected array $resources = [
-        //
-    ];
-
-    protected array $prompts = [
-        //
-    ];
+    protected array $tools = [OrderStatusFinderTool::class];
+    protected array $resources = [];
+    protected array $prompts = [];
 }

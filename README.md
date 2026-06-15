@@ -34,27 +34,19 @@ DB_DATABASE=mcp-db
 DB_USERNAME=root
 DB_PASSWORD='Password' 
 ```
-4. Set GEMINI key, or what ever AI provider
-```
-GEMINI_API_KEY=<some-key>
-or
-ANTHROPIC_API_KEY=<some-key>
-or
-OPENAI_API_KEY=<some-key>
-``` 
-5. Generate encryption key for App
+4. Generate encryption key for App
 ```
 php artisan key generate
 ```
-6. run migration
+5. run migration
 ```
 php artisan migrate
 ```
-7. run db-seed
+6. run db-seed
 ```
 php artisan db:seed
 ```
-8. run the app
+7. run the app
 ```
 php artisan server
 ```
@@ -101,6 +93,7 @@ php artisan server
 ### Via Antigravity CLI
 1. Config
 Open  ~/.gemini/config/mcp_config.json
+
 Add:
 ```json
 {
