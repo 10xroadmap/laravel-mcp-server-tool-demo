@@ -1,4 +1,8 @@
 # Laravel MCP Server
+
+### Youtube Video
+[Build MCP Server with Laravel](https://www.youtube.com/watch?v=9yFzD-1JoQE)
+
 ## Why Choose a Laravel-Based MCP Server?
 - If your application is built on `Laravel`, developing a `MCP Server` directly within your existing codebase is often more efficient and secure than maintaining a separate Python microservice. 
 - By using Laravel as your MCP host, you create a seamless translation layer that exposes your data, business logic, and internal functions directly to AI agents like Antigravity or Claude Code

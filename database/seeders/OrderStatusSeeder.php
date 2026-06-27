@@ -1,11 +1,7 @@
 <?php
-
 namespace Database\Seeders;
-
 use App\Models\OrderStatus;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-
 class OrderStatusSeeder extends Seeder
 {
     /**
@@ -14,7 +10,6 @@ class OrderStatusSeeder extends Seeder
     public function run(): void
     {
         $data = [
-
             ['1', 'Noodles', 'PENDING'],
             ['2', 'Sauce', 'PROCESSING'],
             ['3', 'Samsung S24', 'READY_FOR_SHIPMENT'],
